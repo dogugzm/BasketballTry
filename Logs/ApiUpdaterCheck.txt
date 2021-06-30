@@ -1,0 +1,20 @@
+[api-updater (non-obsolete-error-filter)] 28.06.2021 14:00:08 : Starting C:/Users/Valjean/UnityProjects/2020.3.11f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 5019,2676ms
+moved types parse time: 196ms
+candidates parse time : 1ms
+C# parse time         : 650ms
+candidates check time : 37ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 29.06.2021 13:36:26 : Starting C:/Users/Valjean/UnityProjects/2020.3.11f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 7292,1355ms
+moved types parse time: 82ms
+candidates parse time : 1ms
+C# parse time         : 1215ms
+candidates check time : 37ms
+console write time    : 1ms
+

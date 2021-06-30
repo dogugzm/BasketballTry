@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2614242618169837365}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1059, y: 1, z: 1}
   m_Children:
   - {fileID: 2579751913516756522}
   m_Father: {fileID: 0}
@@ -54,11 +54,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentWayPoint: 0
-  speed: 4
+  Hoop: {fileID: 0}
+  Ball: {fileID: 0}
+  BallTarget: {fileID: 0}
+  inCircle: {fileID: 0}
+  outCircle: {fileID: 0}
+  Timer: {fileID: 0}
+  speed: 5
+  ballSpeed: 4
   toLeft: 0
   toRight: 0
   animator: {fileID: 2614242616269703623}
-  rb: {fileID: 0}
+  rb: {fileID: 5669672047535757051}
 --- !u!54 &5669672047535757051
 Rigidbody:
   m_ObjectHideFlags: 0
