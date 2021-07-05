@@ -6,7 +6,8 @@ using DG.Tweening;
 public enum EnemyState 
 {
     PATROL,
-    BLOCK
+    BLOCK,
+    IDLE
 }
 
 public class EnemyMove : MonoBehaviour
@@ -49,19 +50,21 @@ public class EnemyMove : MonoBehaviour
         //    Player.GetComponent<PlayerMove>().rotateEnemy = false;
         //}
 
-
         if (Player.GetComponent<PlayerMove>().currentState == PlayerState.PATROL)
         {
             currentState = EnemyState.PATROL;
         }
-        else
+        else if (Player.GetComponent<PlayerMove>().currentState == PlayerState.IDLE)
         {
+            currentState = EnemyState.IDLE;
 
+        }
+        else if (Player.GetComponent<PlayerMove>().currentState == PlayerState.SHOOT)
+        {
             currentState = EnemyState.BLOCK;
             StartCoroutine("Block");
 
         }
-
         
         // check if we have somewere to walk
         if (Player.GetComponent<PlayerMove>().currentWayPoint < this.wayPointListEnemy.Length && currentState == EnemyState.PATROL)
@@ -80,7 +83,8 @@ public class EnemyMove : MonoBehaviour
     }
     public void RotateTowardsPlayer()
     {
-        transform.DORotate(Player.transform.position, 1f);
+        
+        transform.DOLookAt(Player.transform.position,0.5f);
     }
 
     public void Fallow()
@@ -123,12 +127,24 @@ public class EnemyMove : MonoBehaviour
     {
         if (currentState == EnemyState.PATROL)
         {
-            animator.SetTrigger("Running");
+            animator.SetBool("Walk", true);
+            animator.SetBool("Idle", false);
+            animator.SetBool("Jump", false);
+
+        }
+        else if (currentState == EnemyState.IDLE)
+        {
+            RotateTowardsPlayer();
+            animator.SetBool("Idle", true);
+            animator.SetBool("Walk", false);
+            animator.SetBool("Jump", false);
 
         }
         else if (currentState == EnemyState.BLOCK)
         {
-            animator.SetTrigger("Jumping");
+            animator.SetBool("Jump", true);
+            animator.SetBool("Walk", false);
+            animator.SetBool("Idle", false);
         }
 
     }

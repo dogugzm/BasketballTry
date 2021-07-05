@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/1.match.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: dfbb726d51b3ece4a95a617eec2551a0
+  - enabled: 1
+    path: Assets/Scenes/EndScreenEnemy.unity
+    guid: 98122a5d11921d24580ffb3b86eead26
+  - enabled: 1
+    path: Assets/Scenes/EndGameDraw.unity
+    guid: 474c3ee803b31194c8af035cfb6da5b8
+  - enabled: 1
+    path: Assets/Scenes/endscreenchamp.unity
+    guid: 364a078bd49c821468cff87ab430ecc0
+  - enabled: 1
+    path: Assets/Scenes/2.Match.unity
+    guid: 3a249186b02ba144c89305e81b6f3c51
   m_configObjects: {}
